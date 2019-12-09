@@ -3,13 +3,20 @@ require 'dessert'
 
 =begin
 Instructions: implement all of the pending specs (the `it` statements without blocks)! Be sure to look over the solutions when you're done.
+
+Do not modify anything within the chef and desert classes
+
 =end
 
 describe Dessert do
+  #Test double = stunt double
   let(:chef) { double("chef") }
 
   describe "#initialize" do
-    it "sets a type"
+    it "sets a type" do 
+      test_dessert = Dessert.new("cupcake", 3, :chef)
+      expect(test_dessert.type).to eq("cupcake")
+    end
 
     it "sets a quantity"
 
